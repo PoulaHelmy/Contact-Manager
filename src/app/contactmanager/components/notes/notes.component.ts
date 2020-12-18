@@ -17,13 +17,13 @@ import { Note } from '../../models/note';
 export class NotesComponent implements OnInit {
   @Input() notes: Note[] | any;
 
-  displayedColumns: string[] = ['position', 'title', 'date'];
+  displayedColumns: string[] = ['id', 'title', 'date'];
   dataSource: MatTableDataSource<Note> | any;
 
   constructor() {}
 
-  @ViewChild(MatPaginator) paginator: MatPaginator | any;
-  @ViewChild(MatSort) sort: MatSort | undefined ;
+  @ViewChild(MatPaginator) paginator: MatPaginator | undefined;
+  @ViewChild(MatSort) sort: MatSort | undefined;
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
