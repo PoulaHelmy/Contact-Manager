@@ -5,7 +5,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonsComponent } from './demo/buttons/buttons.component';
+import { HttpClientModule } from '@angular/common/http';
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'contactmanager',
+    pathMatch: 'full',
+  },
   {
     path: 'demo',
     loadChildren: () => import('./demo/demo.module').then((m) => m.DemoModule),
@@ -28,6 +34,7 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes),
     BrowserAnimationsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

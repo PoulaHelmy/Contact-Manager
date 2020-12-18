@@ -7,10 +7,13 @@ const routes: Routes = [
   {
     path: '',
     component: ContactmanagerComponent,
-    children: [{ path: '', component: MainContactComponent }],
+    children: [
+      { path: ':id', component: MainContactComponent },
+
+      { path: '', component: MainContactComponent },
+    ],
   },
-  // { path: 'buttons', component: ButtonsComponent },
-  // { path: 'flex', component: FlexboxComponent },
+
   { path: '**', redirectTo: '' },
 ];
 

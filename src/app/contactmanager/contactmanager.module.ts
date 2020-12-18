@@ -8,11 +8,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import { ContactManagerRoutingModule } from './contactmanager-routing.module';
 import { MainContactComponent } from './components/main-contact/main-contact.component';
+import { UserService } from './services/user.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
     ContactManagerRoutingModule,
+    HttpClientModule,
     MaterialModule,
     FlexLayoutModule,
     FormsModule,
@@ -23,5 +26,6 @@ import { MainContactComponent } from './components/main-contact/main-contact.com
     SidenavComponent,
     MainContactComponent,
   ],
+  providers: [UserService],
 })
 export class ContactmanagerModule {}
