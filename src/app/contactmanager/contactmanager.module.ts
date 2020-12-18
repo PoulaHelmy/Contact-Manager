@@ -10,6 +10,7 @@ import { ContactManagerRoutingModule } from './contactmanager-routing.module';
 import { MainContactComponent } from './components/main-contact/main-contact.component';
 import { UserService } from './services/user.service';
 import { HttpClientModule } from '@angular/common/http';
+import { NotesComponent } from './components/notes/notes.component';
 
 @NgModule({
   imports: [
@@ -25,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     ToolbarComponent,
     SidenavComponent,
     MainContactComponent,
+    NotesComponent,
   ],
   providers: [UserService],
 })
